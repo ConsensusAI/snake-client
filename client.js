@@ -11,6 +11,10 @@ const connect = function () {
   conn.on('connect', () => {
     console.log("Connected successfully.");
     conn.write("Name: SNK");
+    // conn.write("Move: up");
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 1000);
   });
   conn.on('data', (data) => {
       console.log(data);
