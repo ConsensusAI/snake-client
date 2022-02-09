@@ -1,3 +1,5 @@
+const { MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, EXIT, MESSAGES } = require("./constants");
+
 let connection;
 const setupInput = (conn) => {
   connection = conn;
@@ -10,24 +12,30 @@ const setupInput = (conn) => {
 };
 
 const handleUserInput = function(key) {
-    if (key === '\u0003') {
-      process.exit();
-    };
-    if (key === "w") {
-      connection.write("Move: up");
-    };
-    if (key === "a") {
-      connection.write("Move: left");
-    };
-    if (key === "s") {
-      connection.write("Move: down");
-    };
-    if (key === "d") {
-      connection.write("Move: right");
-    };
-    if (key === "z") {
-      connection.write("Say: Sleeping")
-    };
+  if (key === EXIT) {
+    process.stdout.write('\n');
+    process.exit();
+  }
+  if (key === MOVE_UP_KEY) {
+    connection.write("Move: up");
+    process.stdout.write('\033[2K' + '\rYou moved UP');
+  }
+  if (key === MOVE_LEFT_KEY) {
+    connection.write("Move: left");
+    process.stdout.write('\033[2K' + '\rYou moved LEFT');
+  }
+  if (key === MOVE_DOWN_KEY) {
+    connection.write("Move: down");
+    process.stdout.write('\033[2K' + '\rYou moved DOWN');
+  }
+  if (key === MOVE_RIGHT_KEY) {
+    connection.write("Move: right");
+    process.stdout.write('\033[2K' + '\rYou moved RIGHT');
+  }
+  if (MESSAGES[key]) {
+    connection.write("Say: " + MESSAGES[key]);
+    process.stdout.write('\033[2K' + '\rYou said: ' + MESSAGES[key]);
+  }
 };
 
 module.exports = {setupInput, handleUserInput};
