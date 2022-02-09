@@ -19,3 +19,4 @@ Before you can run this client, you will need to be running the server side whic
 - Input name when prompted. 
 - Movement is controlled by WASD.
 - Send messages using other key commands. A full list of key commands for messages can be found here: [CONSTANTS](./constants.js).
+- Enjoy!
