@@ -9,7 +9,9 @@ Before you can run this client, you will need to be running the server side whic
 ## Final Product
 
 ![A snake's humble beginnings..](https://github.com/ConsensusAI/snake-client/blob/master/screenshots/snake-client.png)
+_A snake's humble beginnings.._
 ![Some banter for your friends](https://github.com/ConsensusAI/snake-client/blob/master/screenshots/snake-falling-asleep.png)
+_Some banter for your friends_
 
 ## Getting Started
 
