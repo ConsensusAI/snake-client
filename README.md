@@ -21,3 +21,19 @@ _Some banter for your friends_
 - Movement is controlled by WASD.
 - Send messages using other key commands. A full list of key commands for messages can be found here: [CONSTANTS](./constants.js).
 - Enjoy!
+
+### Objectives
+
+1. Eat food.
+- Eat more food.
+  - _Devour_ food.
+2. Eat more than your friends!
+3. Send them fun messages!  
+
+### Acknowledgements
+
+1. A big thanks to Tania Rascia for developing Snek.[^1]
+2. Shoutout to @github.com/kvirani and @github.com/lighthouse-labs for guiding me along this learning journey. [Check them out!](https://www.lighthouselabs.ca/) [^2]
+
+[^1]: https://github.com/taniarascia/snek
+[^2]: https://github.com/lighthouse-labs/
